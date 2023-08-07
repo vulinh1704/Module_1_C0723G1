@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="name" onchange="layDuLieu()">
+<!--<button onclick="layDuLieu()">Nhập</button>-->
+
+<script>
+    // let name = prompt("Nhập vào đi: ")
+    // alert(name);
+
+    function layDuLieu() {
+        let ten = document.getElementById("name").value;
+        alert(ten);
+    }
+
+    // onclick : là một sự kiện của HTML, chạy khi người dùng NHẤN VÀO
+    // onchange: là một sự kiện của HTML, chạy khi value của INPUT (hoặc SELECT) THAY ĐỔI VALUE.
+
+</script>
+</body>
+</html>
