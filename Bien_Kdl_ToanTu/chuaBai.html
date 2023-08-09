@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="name">
+<button onclick="hienThi()">Nhấn</button>
+
+<p id="ketQua"></p>
+<script>
+    /*
+    let name = prompt("Nhập tên đi");
+    document.write(name);
+     */
+    function hienThi() {
+        let name = document.getElementById('name').value;
+        document.getElementById('ketQua').innerHTML = 'Tên của bạn là: ' + name;
+        document.getElementById('name').value = '';
+    }
+
+</script>
+</body>
+</html>

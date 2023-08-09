@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa bài tập</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="money">
+        </td>
+        <td>
+            <select id="from">
+                <option value="vnd">Việt Nam</option>
+                <option value="usd">Mỹ</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="usd">Mỹ</option>
+                <option value="vnd">Việt Nam</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+    </tr>
+</table>
+
+<p id="result"></p>
+<script>
+    function convert() {
+        let tien = +document.getElementById("money").value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById("to").value;
+        let kq = 0;
+        if (from === 'vnd' && to === 'usd') {
+            kq = tien / 23000;
+            document.getElementById('result').innerHTML = "Result: " + kq + " USD";
+        }
+        if (from === 'usd' && to === 'vnd') {
+            kq = tien * 23000;
+            document.getElementById("result").innerHTML = "Result: " + kq + " VND";
+        }
+        if(from === to) {
+            kq = tien;
+            document.getElementById("result").innerHTML = "Result: " + kq + to;
+        }
+    }
+</script>
+</body>
+</html>

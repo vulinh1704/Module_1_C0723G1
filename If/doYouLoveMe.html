@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bạn có yêu tôi không?</h1>
+<div style="margin-left: 70px">
+    <button onclick="clickYes()">Có</button>
+    <button id="no" style="position: relative; left: 0px; top: 0px" onmouseover="hoverNo()">Không</button>
+</div>
+
+<script>
+    function clickYes() {
+        alert("Tôi cũng thế!!")
+    }
+
+    function hoverNo(){
+        let a = document.getElementById('no');
+        a.style.left = (Math.random() * window.innerWidth) + 'px';//Math.random() trả về số 0 => 0.9999
+        a.style.top = (Math.random() * window.innerHeight) + 'px';
+    }
+</script>
+</body>
+</html>

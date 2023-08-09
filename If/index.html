@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc điều kiện</title>
+</head>
+<body>
+😢😢😣
+<script>
+    /*
+    Biến: Là tên gọi vùng chứa dữ liệu
+          let a = 1;
+          var a = 1;
+          const PI = 3.14
+
+    Kiểu dữ liệu:number, string, boolean (true or false)
+    Toán tử: Toán tư toán học (+, -, * /, %, ++, --)
+            Toán tử gán ( =, +=, *=, /=, %=)
+            Toán tử so sánh (==, ===, !=, !==, >=, <=, <, >) Trả về true or false
+
+     let a = 0;
+     a += 1; // <=> a = a + 1 <=> ++a;
+     */
+
+
+    /*
+    let diem = +prompt("Nhập điểm đi: ");
+    if (diem > 75) { // Khi kết thúc câu lệnh if thì sẽ tiếp tục chạy code bên dưới
+        alert("Bạn đỗ Module 1");
+    } else { // (điểm <= 75)
+        alert("Chúc mừng bạn lên lớp C08");
+    }
+    console.log("Nói chuyện với Linh");
+     */
+
+
+    /*
+    // Nhập vào điểm nếu > 75 in ra Tốt, 60 đến 75 in ra khá, 30 đến 60 in ra yếu.
+    let diem = +prompt("Nhập điểm đi: ");
+    if (diem > 75) {
+        alert("Tốt")
+    } else if (diem > 60 && diem <= 75) {
+        alert("Khá")
+    } else if (diem > 30 && diem <= 60) {
+        alert("Trung bình")
+    } else {
+        alert("Yếu")
+    }
+     */
+
+    // let x = +prompt("Nhập vào x: ")
+    // if (x < 10) {
+    //     if (x > 7) {
+    //         alert("x thuộc khoảng 7 - 10")
+    //     }
+    // }
+    //
+    // if (x < 10 && x > 7) {
+    //     alert("x thuộc khoảng 7 - 10");
+    // }
+
+    let diem = +prompt("Nhập vào điểm: ")
+    switch (diem) {
+        case 100:
+            alert("điểm là 100");
+            break;
+        case 99:
+            alert("Điểm là 99");
+            break;
+        default:
+            alert("Điểm không hợp lệ");
+    }
+
+
+</script>
+</body>
+</html>
