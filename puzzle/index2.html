@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="1_1.png" id="head" alt="" onclick="changeImageOne()">
+<br>
+<img src="2_2.png" id="body" alt="" onclick="changeImageTwo()">
+<br>
+<img src="3_1.png" id="end" alt="" onclick="changeImageThree()">
+
+<p id="tb"></p>
+<script>
+    let tailImageOne = 1;
+    let tailImageTwo = 1;
+    let tailImageThree = 1;
+
+    let img1 = document.getElementById('head')
+    let img2 = document.getElementById('body')
+    let img3 = document.getElementById('end')
+    function changeImageOne() {
+        ++tailImageOne;
+        img1.src = '1_' + tailImageOne + '.png' // 1_2.png
+        if(tailImageOne === 2) {
+            tailImageOne = 0;
+        }
+        check();
+    }
+
+    function changeImageTwo() {
+        ++tailImageTwo;
+        img2.src = '2_' + tailImageTwo + '.png'
+        if(tailImageTwo === 2) {
+            tailImageTwo = 0;
+        }
+        check();
+    }
+
+    function changeImageThree() {
+        ++tailImageThree;
+        img3.src = '3_' + tailImageThree + '.png'
+        if(tailImageThree === 2) {
+            tailImageThree = 0;
+        }
+        check();
+    }
+
+    function check() {
+        let link1 = img1.src;
+        let link2 = img2.src;
+        let link3 = img3.src;
+        if(link1.includes('1_1.png') && link2.includes('2_1.png') && link3.includes('3_1.png')) {
+            document.getElementById("tb").innerHTML = 'You won'
+        }
+        if(link1.includes('1_2.png') && link2.includes('2_2.png') && link3.includes('3_2.png')) {
+            document.getElementById("tb").innerHTML = 'You won'
+        }
+    }
+</script>
+</body>
+</html>
