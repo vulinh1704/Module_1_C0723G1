@@ -17,12 +17,13 @@
     let tailImageTwo = 1;
     let tailImageThree = 1;
 
-    let img1 = document.getElementById('head')
-    let img2 = document.getElementById('body')
-    let img3 = document.getElementById('end')
+    let img1 = document.getElementById('head');
+    let img2 = document.getElementById('body');
+    let img3 = document.getElementById('end');
+
     function changeImageOne() {
-        ++tailImageOne;
-        img1.src = '1_' + tailImageOne + '.png' // 1_2.png
+        ++tailImageOne; // 1
+        img1.src = '1_' + tailImageOne + '.png' // 1_1.png
         if(tailImageOne === 2) {
             tailImageOne = 0;
         }
@@ -48,7 +49,7 @@
     }
 
     function check() {
-        let link1 = img1.src;
+        let link1 = img1.src; //http/f393439/1_1.png
         let link2 = img2.src;
         let link3 = img3.src;
         if(link1.includes('1_1.png') && link2.includes('2_1.png') && link3.includes('3_1.png')) {

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp</title>
+</head>
+<body>
+
+<script>
+    // for (let count = 0; count < 1000; count++) { // 0 <= 1000 (true); 1 <= 1000 (true)
+    //     alert(count) // 0 1
+    // }
+
+    // for (let i = 19; i >= 0; i = i - 2) { // i = -1 => -1 > = 0 (false)
+    //     console.log(i) // 19 18 17 .... 0
+    // }
+
+    // for (let i = 0; i <= 20; i++) { // 0 1 2 3
+    //     if (i % 2 !== 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+    // Bài tập: In ra các số từ 0 - 50 cùng chia hết cho 3 và 5
+    // for (let i = 0; i <= 50; i++) {
+    //     if (i % 3 === 0 && i % 5 === 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+    /*
+
+    for (<Khởi tạo biến đếm>; <điều kiện dừng>; <tăng giảm biến đếm>) {
+        <Khối lệnh được thực thi>
+    }
+
+    Bước 1: <khởi tạo biến đếm>
+    Bước 2: <điều kiện dừng> Kiểm tra điều kiện xem có trả về true hay false
+    Bước 3: <khối lệnh thực thi> nếu ở bước 2 điều kiện trả về true;
+    Bước 4: <tăng giảm biến đếm> sau đó quay trở lại bước 2
+    cho đến khi bước 2 trả về false thì vòng lặp dừng
+
+     */
+
+    /*
+    for (let i = 11; i > 10; i--) {
+        console.log(i);
+    }
+     */
+
+    // Điều kiện dừng luôn trả về true
+
+    /*
+    for (let i = 0; i < 20; i++) {
+        console.log(i); // 0
+        break;
+        console.log("Linh");
+    }
+
+     */
+
+    // break: Là một từ khóa sử dụng để dừng vòng lặp for
+
+    // for (let i = 0; i < 20; i++) {
+    //     if (i % 2 === 0) {
+    //         continue;
+    //     }
+    //     console.log(i);
+    // }
+    // In ra các số không chia hết cho 3 từ 0 - 20
+
+
+    // continue: bỏ khối lệnh thực bên dưới nó của vòng lặp hiện tại
+
+    // while
+
+    /*
+
+    while(<điều kiện>) {
+        <Khối lệnh thực thi>
+
+    }
+
+     */
+
+    // let i = 0;
+    // while (i < 20) {
+    //     console.log(i);
+    //     i++;
+    // }
+    // In ra 5 10 15 20
+
+    let i = 0;
+    while (i <= 20) { // i = 5
+        i++; // i = 6
+        if(i % 5 === 0) {
+          continue;
+        }
+        console.log(i) // 1 2 ... 6
+    }
+
+
+    /*
+    do {
+       <Khối lệnh thực thi>
+    } while (<điều kiện>)
+
+     */
+
+
+    // let i = 0;
+    // do {
+    //     console.log(i); // 0 1 2 .... 19
+    //     i++; // 20
+    // } while (false);
+</script>
+</body>
+</html>
