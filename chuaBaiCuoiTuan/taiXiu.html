@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Bắt đầu chơi</button>
+<script>
+    let ketQua;
+    function play() {
+        ketQua = Math.floor(Math.random() * 10); //Math.random sẽ các số từ 0 đến 0.999999
+        console.log(ketQua)
+        let number;
+        let count = 0;
+        do {
+            number = +prompt("Nhập số mà bạn đoán");
+            count++;
+            if(count === 3) {
+                alert("Bạn đã thua!!");
+                break;
+            }
+        } while (number !== ketQua); // number === ketQua
+    }
+
+    //  1  1  2  3  5  8  13
+    //           f  l
+    // first = 0;
+    // last = 1;
+    // sum = 0;
+
+    // console.log(last)
+    // sum = last + first
+    // fist = last
+    // last = sum;
+
+
+
+</script>
+</body>
+</html>

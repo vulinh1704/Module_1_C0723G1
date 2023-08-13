@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So nguyen to</title>
+</head>
+<body>
+
+<script>
+    // Số nguyên tố là số chỉ chia được 1 và chính nó: 2, 7, 5, 3 (2 ước)
+
+    // Nhập vào 1 số và kiểm tra xem có phải số nguyên tố hay không?
+
+    /*
+    let count = 0;
+    for (let i = 1; i <= a; i++) {
+        if(a % i === 0) {
+            count++;
+        }
+    }
+    if(count === 2) {
+        alert("Là số nguyên tố")
+    } else {
+        alert("Không phải số nguyên tố")
+    }
+     */
+
+    // Nhập vào một số và in ra các nguyên tố nhỏ hơn số đó.
+    let a = 1;
+    let n = +prompt("Nhập n: ")
+    let demSoNguyenTo = 0;
+    while (true) { // a = 2
+        let count = 0;
+        for (let j = 1; j <= a; j++) { // 3 <= 2
+            if(a % j === 0) {
+                count++; // count = 2
+            }
+        }
+        if(count === 2) { // 2 === 2
+            document.write(a + "<br/>"); // 2
+            demSoNguyenTo++; // 1
+        }
+        a++; // a = 2
+        if(demSoNguyenTo === n) {
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>
