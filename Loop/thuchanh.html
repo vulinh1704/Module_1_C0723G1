@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết chương trình nhập một số nguyên,tìm 20 bội số của số đó, sau đó in kết quả ra màn hình.
+    /*
+    let n = +prompt("Nhập số nguyên: ")
+    for (let i = 1; i <= 20; i++) {
+        console.log(`Bội thứ ${i}: ${n * i}`)
+    }
+     */
+
+    // Bài 2: Viết chương trình nhập một câu bất kỳ, đếm số từ và ký tự trong câu đó, và in kết quả ra màn hình.
+    // (Ví dụ: Input: "Truong Linh"  ==> Output: Số từ: 2 và số ký tự: 11)
+
+    // let string = prompt("Nhập từ: ")
+    // let countChar = 0;
+    // let countWord = 1;
+    // for (let i = 0; i < string.length; i++) { // .length: Trả về số ký tự trong chuỗi
+    //     countChar++;
+    //     if(string[i] === " "){ // Lấy về ký tự tại vị trí thứ i trong chuỗi string
+    //         countWord++
+    //     }
+    // }
+    // alert(`Số ký tự là: ${countChar} và số từ là: ${countWord}`);
+
+    // Bài 3: Nhập số nguyên n bất kỳ, viết chương trình in các phần tử đầu tiên của dãy Fibonacci từ 0 đến n.
+    // (Ví dụ: Input: 20  ==>  Output:
+    // 0 1 1 2 3 5 8 13
+    //     f l
+    // let n = +prompt("Nhập n: ")
+    // let first = 0;
+    // let last = 1;
+    // let sum = 0;
+    // for (let i = 1; ; i++) {
+    //     document.write(last + "<br/>");  // 1 1 2 3
+    //     sum = first + last; // 3
+    //     first = last; // 2
+    //     last = sum; // 3
+    //     if(last >= n) {
+    //         break;
+    //     }
+    // }
+
+    // Bài 4: Nhập số nguyên n. Tính giá trị biểu thức S= 1.2 + 2.3 + 3.4 + ... + n(n+1).
+    // let n = +prompt("Nhập n "); //5
+    // let S = 0;
+    // for (let i = 1; i <= n; i++) { // i = 2
+    //    S = S + i * (i + 1); // 2 + 2 * 3
+    // }
+    // alert(S);
+
+    // Bài 5: Nhập vào n: Viết chương trình tính kết quả biểu thức S= 1/1^3+1/2^3+1/3^3+...+1/n^3
+    // let n = +prompt("Nhập n "); //5
+    // let S = 0;
+    // for (let i = 1; i <= n; i++) {
+    //    S = S + 1 / Math.pow(i, 3);
+    // }
+    // alert(S);
+
+    // Bài 6: Nhập vào hai số nguyên dương a và b. Tìm tổng của tất cả các số lẻ và chẵn nằm giữa hai số đó.
+    // (Ví dụ: Input : a = 5, b = 9 ==> Output: Tổng số lẻ là 21 và Tổng số chẵn là 14)
+
+    // let a = +prompt("Nhập số bắt đầu: ")
+    // let b = +prompt("Nhập số kết thúc: ")
+    // let tongLe = 0;
+    // let tongChan = 0;
+    // for (let i = a; i <= b; i++) {
+    //     if(i % 2 === 0) {
+    //         tongChan += i;
+    //     } else {
+    //         tongLe += i;
+    //     }
+    // }
+    // alert(`Tổng số lẻ là ${tongLe} và Tổng số chẵn là ${tongChan}`)
+
+    // - Hoành thành luyện tập 2: https://james.codegym.vn/mod/assign/view.php?id=15456&forceview=1
+    // - Bài số nguyên tố: https://james.codegym.vn/mod/assign/view.php?id=15454
+
+
+    // Tam giác 1:
+    // for (let i = 1; i <= 5; i++) { //i
+    //     for (let j = 1; j <= i; j++) { // 1 <= 1
+    //         document.write("*")
+    //     }
+    //     document.write("<br>")
+    // }
+
+    // Tam giác 2
+    // for (let i = 1; i <= 5; i++) { // i = 2
+    //     for (let j = 5; j >= i; j--) { // 5 >= 2
+    //         document.write("*")
+    //     }
+    //     document.write("<br>")
+    // }
+
+    // Tam giác 3
+    for (let i = 1; i <= 5; i++) { // i = 2
+        let dong = "";
+        for (let j = 1; j <= (5 - i); j++) { // j <= 3
+            dong += " "
+        }
+        for (let j = 1; j <= i; j++) { // j <= 2
+            dong += "*";
+        }
+        console.log(dong);
+    }
+
+</script>
+</body>
+</html>
