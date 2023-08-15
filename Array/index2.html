@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa bài</title>
+</head>
+<body>
+
+<script>
+    // - In ra max của các phần tử chẵn mảng
+    /*
+    let numbers = [101,201,5,9,2,6]
+    let maxChan;
+    for (let i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 === 0) {
+            maxChan = numbers[i];
+        }
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+        if(numbers[i] > maxChan && numbers[i] % 2 === 0){
+            maxChan = numbers[i];
+        }
+    }
+    alert(maxChan);
+     */
+
+
+    // - In ra trung bình các phần tử chia hết cho 5 trong mảng
+    // let numbers = [10, 25, 5, 9, 2, 6]
+    // let sum = 0;
+    // let count = 0;
+    // for (let i = 0; i < numbers.length; i++) {
+    //     if (numbers[i] % 5 === 0) {
+    //         sum += numbers[i];
+    //         count++;
+    //     }
+    // }
+    // let avg = sum/count;
+    // alert(`Giá trị trung bình là: ${avg}`)
+
+
+    // Bài 6
+    // let numbers = [4, 6, 9, 25, 7];
+    // let V = +prompt("Nhập V: ");
+    // if(numbers.indexOf(V) !== -1) {
+    //     alert("V is in array")
+    // } else {
+    //     alert("V is not in array")
+    // }
+    // indexOf(x): là hàm sẽ kiểm tra xem giá trị x có nằm trong mảng hay không, nếu có trả về vị trí của nó còn không trả về -1
+
+    // let flag = false;
+    // for (let i = 0; i < numbers.length; i++) {
+    //     if (V === numbers[i]) {
+    //         flag = true;
+    //         break;
+    //     }
+    // }
+    //
+    // if(flag) {
+    //     alert("V is in array")
+    // } else {
+    //     alert("V is not in array")
+    // }
+
+
+    // Bài 7
+    // let numbers = [4, 6, 9, 25, 7];
+    // let V = +prompt("Nhập V: ");
+    // for (let i = 0; i < numbers.length; i++) {
+    //     if(numbers[i] === V){
+    //         numbers.splice(i, 1);
+    //     }
+    // }
+    // console.log(numbers);
+
+    // Bài 8
+    let numbers = [4, 6, 9, 25, 7];
+    numbers.sort(function (a, b) {return b - a});
+    console.log(numbers);
+
+
+</script>
+</body>
+</html>
