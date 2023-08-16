@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa bài</title>
+</head>
+<body>
+
+<script>
+
+    // let arr = [
+    //     [1, 3, 4],
+    //     [3, 4, 5],
+    //     [5, 5, 6]
+    // ];
+    // Bài 9:
+    // 02 11 20
+    // let cheoPhu = 0
+    // for (let i = 0; i < arr.length; i++) {// i = 2
+    //     cheoPhu = cheoPhu + arr[i][arr.length - 1 - i] // [0][2] [1][1] [2][0]
+    // }
+    // alert(cheoPhu);
+
+
+    // Bài 8;
+    // 00 11 22
+    // let tongCheo = 0;
+    // for (let i = 0; i < arr.length; i++) { // i = 2
+    //     tongCheo = tongCheo + arr[i][i] // 1 4 6
+    // }
+    // alert(tongCheo);
+
+    // Bài 6
+    // 00 10 20  | 01 11 21
+    // for (let i = 0; i < arr.length; i++) { // 0
+    //     let sumCol = 0;
+    //     for (let j = 0; j < arr.length; j++) { // j = 2; i = 0
+    //         sumCol = sumCol + arr[j][i]; // 00 10 20
+    //     }
+    //     console.log(`Tong cot ${i} là ${sumCol}`)
+    // }
+
+
+
+    // Bài 3
+    // for (let i = 0; i < arr.length; i++) {
+    //     let maxRow = arr[i][0];
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         if (maxRow < arr[i][j]) {
+    //             maxRow = arr[i][j];
+    //         }
+    //     }
+    //     console.log(`Max của hàng ${i} là : ${maxRow}`)
+    // }
+
+    //Bài 2
+    // for (let i = 0; i < arr.length; i++) {
+    //     let sumRow = 0;
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         sumRow = sumRow + arr[i][j];
+    //     }
+    //     console.log(`Tổng của hàng ${i} là: ${sumRow}`)
+    // }
+
+
+    // Bài 1:
+    // let sum = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         sum += arr[i][j];
+    //     }
+    // }
+    // alert(sum);
+
+
+    // Bài 2 James
+    // let arr = [ 'l', 'i', 'n', 'h', '0', '7' ];
+    // let mangNguoc = [];
+    //
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //     mangNguoc.push(arr[i]);
+    // }
+    //
+    // let chuoi = mangNguoc.join('')
+    // console.log(chuoi);
+
+    // Bài 3: James
+    // let str = ['4', 'a', '_', '5', 'k', '6'];
+    // let count = 0;
+    // for (let i = 0; i < str.length; i++) {
+    //     if(!isNaN(str[i])) {
+    //         count++;
+    //     }
+    // }
+    // alert(`Số ký tự số là: ${count}`)
+
+    // let chuoi1 = 'linh4';
+    // let chuoi2 = 'linh2';
+    // if(chuoi1.length !== chuoi2.length){
+    //     alert('Khác nhau')
+    // } else {
+    //     let check = false;
+    //     for (let i = 0; i < chuoi1.length; i++) {
+    //         if(chuoi1[i] !== chuoi2[i]){
+    //             check = true;
+    //             break;
+    //         }
+    //     }
+    //
+    //     if(check === true) {
+    //         alert("Khác nhau")
+    //     } else {
+    //         alert("Giống y hịt")
+    //     }
+    // }
+
+
+    // Bài 6: James
+    // let arr = ['-', 'a', '4', '-', 'l'];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i] === '-') {
+    //         arr[i] = '_';
+    //     }
+    // }
+    // console.log(arr);
+
+    // let str = 'linh-dep-trai';
+    // let arr = str.split(''); // Biến chuỗi thành mảng
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === '-') {
+    //         arr.splice(i, 1, '_');
+    //     }
+    // }
+    // str = arr.join('');
+    // alert(str);
+
+
+
+</script>
+</body>
+</html>
