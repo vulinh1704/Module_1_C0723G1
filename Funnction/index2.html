@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+
+<script>
+    //6
+    // 2 3 5 7 11 ...
+    // function checkPrime(a) {
+    //     if(a < 2) {
+    //         return false;
+    //     } else { // a === 7: chạy từ 2 đến 6
+    //         for (let i = 2; i < a; i++) { // a = 9: i chạy từ 2 đến 8
+    //             if(a % i === 0) {
+    //                 return false;
+    //             }
+    //         }
+    //         return true;
+    //     }
+    // }
+    //
+    // console.log(checkPrime(7));
+
+
+    // function addNumbers() {
+    //     let firstNum = 4;
+    //     let secondNum = 8;
+    //     let result = firstNum + secondNum;
+    //     return result;
+    // }
+    //
+    // let result = 0;
+    // alert(result); // 0
+    // result = addNumbers(); // result = 12
+    // alert(result); //12
+
+    // ["Hi", "Cat", "Dragon", "Rose"]
+    // ["Xin chào", "Mèo", "Nong", "Vợ Linh"]
+
+    let english = ["Hi", "Cat", "Dragon", "Rosé"];
+    let vietnamese = ["Xin chào", "Mèo", "Nong", "Vợ Linh"];
+
+    function translate(str) {
+        let indexInEnglish = english.indexOf(str); // 0 1 2
+        if(indexInEnglish === -1) {
+            return "Không tìm thấy";
+        } else {
+            let result = vietnamese[indexInEnglish];
+            return result;
+        }
+    }
+
+    let string = prompt("Nhập vào tiếng Anh: ")
+    let ketQua = translate(string);
+    alert(ketQua);
+</script>
+</body>
+</html>
