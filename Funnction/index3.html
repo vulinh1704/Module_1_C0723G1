@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hội người bug</title>
+</head>
+<body>
+
+<script>
+    /*
+    // Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần <body> của trang web.
+    function alertMessage(message) {
+        alert(message);
+    }
+    alertMessage("Xin chào");
+
+//Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function binhPhuong(x){
+        return x * x
+    }
+    alert(binhPhuong(10))
+
+
+    //Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    //pi*r*r = S | C = 2 * Pi * r
+    function tinh(r){
+        let s=Math.PI*r*r;
+        let c=2*Math.PI*r
+        alert(s)
+        alert(c)
+    }
+    tinh(5)
+
+    //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    let n=+prompt("Nhập số:");
+    function tinhToan(a){
+        let ketQua=1;
+        for (let i = 1; i <=a ; i++) {
+            ketQua*=i;
+        }
+        return ketQua;
+    }
+
+    let kq = tinhToan(n)
+alert(kq)
+
+
+
+//Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    function checkSo(x){
+        return !isNaN(x);
+    }
+    let nhap = prompt('nhap so vao de');
+    document.write(checkSo(nhap));
+
+
+
+      //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    function findMin(a,b,c){
+        let arr =[a,b,c];
+        let min = arr[0];
+        for (let i=0;i<arr.length;i++){
+            if(min > arr[i]){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    document.write(findMin(5,7,3));
+
+
+     //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+    let integer = +prompt(" Nhap vao 1 so");
+    function checkInteger(integer) {
+        if(integer > 0){
+            return true;
+        }else {
+            return  false;
+        }
+    }
+    alert(checkInteger(integer));
+    //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+     let a = +prompt("So A")
+     let b = +prompt("So B")
+    function doiSo(a,b) {
+         let c = a;
+         a = b;
+         b = c;
+        console.log(a);
+        console.log(b);
+
+    }
+    doiSo(a,b);
+
+
+//Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    function daoNguoc(x) {
+        let mangDao = [];
+        for (let i = x.length-1; i >= 0 ; i--) {
+            mangDao.push(x[i]);
+        }
+        return mangDao;
+    }
+    let a = [1, 3, 5, 9]
+    console.log(daoNguoc(a));
+
+     //Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không,Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    function timKiem(arr,a){
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === a){
+                count++;
+            }
+        }
+        if (count === 0){
+            return -1;
+        }
+        else {
+            return count;
+        }
+    }
+    let x = ['a','a','c','a']
+    console.log(timKiem(x,'d'))
+     */
+</script>
+</body>
+</html>
