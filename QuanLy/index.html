@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hội người bug</title>
+</head>
+<body>
+<h3>Add new product</h3>
+<input type="text" placeholder="new product" id="new-product">
+<button onclick="addProduct()">Add</button>
+
+<h3>Display all product</h3>
+<table border="1">
+    <tr>
+        <th>Product Name</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tbody id="products">
+
+    </tbody>
+
+</table>
+
+<br>
+<div id="form-edit"></div>
+
+<script>
+    // Bước 1: Xây dựng giao diện
+    // Bước 2: Xây dựng các chức năng (Sử dụng Js)
+    // Bước 3: Làm chức năng thì xây dựng các hàm tương ứng với chức năng đó.
+    // CRUD: Create (Tạo mới), Read (Hiển thị), Update (Cập nhật), Delete (Xóa)
+
+    let listProduct = ["Airport", "Redmi", "Iphone"];
+    findAll();
+
+    function findAll() {
+        let stringProducts = ``;
+        for (let i = 0; i < listProduct.length; i++) {
+            stringProducts += `
+            <tr>
+                <td>${listProduct[i]}</td>
+                <td><button onclick="showFormEdit(${i})">Edit</button></td>
+                <td><button onclick="remove(${i})">Delete</button></td>
+            </tr>
+            `
+        }
+        document.getElementById('products').innerHTML = stringProducts;
+    }
+
+    function addProduct() {
+        let productAdd = document.getElementById('new-product').value;
+        listProduct.push(productAdd);
+        findAll();
+    }
+
+    function remove(index) {
+        listProduct.splice(index, 1);
+        findAll();
+    }
+
+    function showFormEdit(index) {
+        let productEdit = listProduct[index];
+        document.getElementById('form-edit').innerHTML = `
+           <input type="text" id="product-edit" value="${productEdit}">
+           <button onclick="editProduct(${index})">Save</button>
+        `
+    }
+
+    function editProduct(index) {
+        let newProductEdit = document.getElementById('product-edit').value;
+        listProduct[index] = newProductEdit;
+        findAll();
+        document.getElementById('form-edit').innerHTML = '';
+    }
+
+</script>
+</body>
+</html>
