@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP Luyện tập</title>
+</head>
+<body>
+
+<script>
+    class Product {
+        name;
+        price;
+        quantity;
+
+        constructor(nameInput, priceInput, quantityInput) {
+            this.name = nameInput;
+            this.price = priceInput;
+            this.quantity = quantityInput;
+        }
+
+        getInfo() {
+            return `Price is: ${this.price} and Name is: ${this.name}`
+        }
+
+    }
+
+    let product1 = new Product('Bánh cáy', 1000, 20);
+    // alert(product1.getInfo())
+    // alert(product1.name);
+    // product1.name = 'Bánh mì';
+    // alert(product1.name);
+
+    let product2 = new Product("Hồng", 500, 1);
+    // alert(product2.name);
+    alert(product2.getInfo());
+    product2.name = "Phon";
+    alert(product2.getInfo());
+</script>
+</body>
+</html>

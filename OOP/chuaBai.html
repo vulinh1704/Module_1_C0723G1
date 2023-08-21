@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hội người bug</title>
+</head>
+<body>
+
+<script>
+    /*
+    class Rectangle {
+        width;
+        height;
+        S;
+        C;
+        constructor(widthInput, heightInput) {
+            this.width = widthInput;
+            this.height = heightInput;
+        }
+
+        getS() {
+            this.S = this.width * this.height;
+            return this.S;
+        }
+
+        getC() {
+            this.C = (this.width + this.height) * 2;
+            return this.C;
+        }
+
+        getInfo() {
+            let data = `Hình chữ nhật có chiều dài là: ${this.width}, chiều rộng là: ${this.height}, chu vi là: ${this.getC()} và diện tích là ${this.getS()}`;
+            return data;
+        }
+    }
+
+    let hcn1 = new Rectangle(20, 10);
+    alert(hcn1.getInfo());
+    hcn1.width = 5;
+    hcn1.height = 2;
+    alert(hcn1.getInfo());
+     */
+
+    class Student {
+        name;
+        age;
+        scores; // []
+        constructor(nameInput, ageInput, scoresInput) {
+            this.age = ageInput;
+            this.name = nameInput;
+            this.scores = scoresInput;
+        }
+        getInfo() {
+            let data = `${this.name} có tuổi là ${this.age} và có điểm trung bình là ${this.getAvg()}`
+            return data;
+        }
+
+        getAvg() {
+            let sum = 0;
+            for (let i = 0; i < this.scores.length; i++) {
+                sum += this.scores[i];
+            }
+            return (sum/this.scores.length).toFixed(2);
+        }
+        setName(nameInput) {
+            this.name = nameInput;
+        }
+
+        compareAvg(student) {
+            if(this.getAvg() > student.getAvg()) {
+                return student.getInfo();
+            } else {
+                return this.getInfo();
+            }
+        }
+    }
+
+    // let sv1 = new Student("Sang", 18, [10, 1, 8]);
+    // alert(sv1.getInfo());
+    // sv1.setName("Hồng");
+    // alert(sv1.getInfo());
+
+    let sv1 = new Student("Linh", 18, [10, 1, 8]);
+    let sv2 = new Student("Hồng", 18, [10, 10, 10]);
+    alert(sv1.compareAvg(sv2) + " có điểm cao hơn");
+    let a = 10;
+</script>
+</body>
+</html>
