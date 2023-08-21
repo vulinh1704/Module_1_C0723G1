@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<script>
+    class Oto { // Lớp
+        ten;
+        dong;
+        canNang;
+        mauSac; //Các thuộc tính
+
+        constructor(tenInput, dongInput, canNangInput, mauSacInput) {
+            // Hàm tạo: Sử dụng tạo ra các ĐỐI TƯỢNG từ LỚP.
+            this.ten = tenInput;
+            this.dong = dongInput;
+            this.canNang = canNangInput;
+            this.mauSac = mauSacInput;
+        }
+
+        start() { // Phương thức trong lớp thì không cần từ khóa function
+            console.log(this.ten + " Xe bắt đầu chạy")
+            // Từ khóa this đại diện cho đối tượng đang sử dụng.
+        }
+    }
+
+    let oto1 = new Oto('mess', 500, 350, 'đỏ'); //Khởi tạo đối tượng bằng từ khóa new
+    console.log(oto1.mauSac); // Truy xuất thuôc tính của đối tượng.
+    oto1.start(); // Truy xuất phương thức của đối tượng.
+
+    let oto2 = new Oto('container', 200, 1000, 'đen');
+    console.log(oto2.dong , oto2.canNang);
+    oto2.start();
+</script>
+</body>
+</html>
