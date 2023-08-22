@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giảng</title>
+</head>
+<body>
+
+<script>
+    // Tạo một lớp Category có id, name;
+    // class Category {
+    //     id;
+    //     name;
+    //
+    //     constructor(idInput, nameInput) {
+    //         this.id = idInput;
+    //         this.name = nameInput;
+    //     }
+    //
+    //     getName() {
+    //         return this.name;
+    //     }
+    //
+    //     getId() {
+    //         return this.id;
+    //     }
+    //
+    //     setName(nameInput) {
+    //         this.name = nameInput;
+    //     }
+    //
+    //     setId(idInput) {
+    //         this.id = idInput;
+    //     }
+    //
+    // }
+    //
+    // // Tạo lớp Product có idProduct (number), price, quantity, category (Category)
+    // class Product {
+    //     idProduct;
+    //     price;
+    //     category;
+    //     constructor(idProductInput, priceInput, categoryInput) {
+    //         this.price = priceInput;
+    //         this.idProduct = idProductInput;
+    //         this.category = categoryInput;
+    //     }
+    //
+    //     getCategory() {
+    //         return this.category;
+    //     }
+    //
+    //     setCategory(categoryInput) {
+    //         this.category = categoryInput;
+    //     }
+    // }
+    //
+    // let loai1 = new Category(1, "Bánh")
+    // let sp1 = new Product(1, 500, loai1);
+    // // console.log(sp1.getCategory());
+    //
+    // let loai2 = new Category(1, "Kẹo")
+    // let sp2 = new Product(1, 300, loai2);
+    // console.log(sp2)
+
+    // let cate1 = new Category(1, "Bánh");
+    // alert(cate1.getName());
+    // cate1.setName("Kẹo")
+    // alert(cate1.getName());
+
+
+    class Student {
+        id;
+        name;
+        constructor(idInput, nameInput) {
+            this.id = idInput;
+            this.name = nameInput;
+        }
+    }
+
+    class Clazz {
+        listStudent; // [student, student2, student3]
+        nameClass;
+        constructor(nameClassInput) {
+            this.nameClass = nameClassInput;
+            this.listStudent = [];
+        }
+
+        addStudent(student) {
+            this.listStudent.push(student);
+        }
+
+        getListStudent() {
+            return this.listStudent;
+        }
+
+        remove(index) {
+            this.listStudent.splice(index, 1);
+        }
+
+        update(index, newStudent) {
+            this.listStudent[index] = newStudent;
+        }
+    }
+
+
+    function main() {
+        let sv1 = new Student(1, 'Rose');
+        let sv2 = new Student(2, 'Jisoo');
+        let sv3 = new Student(3, 'G-Long');
+
+        let lop1 = new Clazz('C07');
+        lop1.addStudent(sv3);
+        lop1.addStudent(sv1);
+        lop1.addStudent(sv2);
+        // lop1.remove(2);
+        let sv4 = new Student(4, "Hồng");
+        lop1.update(0, sv4);
+
+        let mangSv = lop1.getListStudent();
+        for (let i = 0; i < mangSv.length; i++) {
+            console.log(mangSv[i].name)
+        }
+    }
+
+    main();
+
+</script>
+</body>
+</html>
