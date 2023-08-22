@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa bài 2</title>
+</head>
+<body>
+
+<script>
+    class Product {
+        id;
+        name;
+        price;
+        quantity;
+
+        constructor(idInput, nameInput, priceInput, quantityInput) {
+            this.id = idInput;
+            this.name = nameInput;
+            this.price = priceInput;
+            this.quantity = quantityInput;
+        }
+
+        // get set
+        getPrice() {
+            return this.price;
+        }
+
+        getInfo() {
+            let data = `${this.name} có id là ${this.id} và giá là ${this.price}`
+            return data;
+        }
+    }
+
+    class Store {
+        listProduct;
+
+        constructor() {
+            this.listProduct = [];
+        }
+
+        addProduct(product) {
+            this.listProduct.push(product)
+        }
+
+        findAll() {
+            return this.listProduct;
+        }
+
+        remove(index) {
+            this.listProduct.splice(index, 1);
+        }
+
+        update(index, newProduct) {
+            this.listProduct[index] = newProduct;
+        }
+
+        findListProductPriceThan200() {
+            let list = [];
+            for (let i = 0; i < this.listProduct.length; i++) {
+                if(this.listProduct[i].getPrice() > 200) {
+                    list.push(this.listProduct[i]);
+                }
+            }
+            return list;
+        }
+    }
+
+    function main() {
+        let sp1 = new Product(1, "Hà Linh", 200, 1);
+        let sp2 = new Product(2, "Quỳnh", 0, 2);
+        let sp3 = new Product(3, "Hồng", 2000, 1);
+
+        let shop = new Store();
+        shop.addProduct(sp1);
+        shop.addProduct(sp2);
+        shop.addProduct(sp3);
+
+        let sp4 = new Product(4, "Sang", 300, 5);
+        shop.addProduct(sp4);
+        // shop.update(2, sp4)
+        // shop.remove(1);
+
+
+        // Lấy tất cả
+        // let listProductInShop = shop.findAll();
+        // for (let i = 0; i < listProductInShop.length; i++) {
+        //     document.write(listProductInShop[i].getInfo() + "<br>");
+        // }
+
+        // Lấy sản phẩm > 200;
+        let listProduct = shop.findListProductPriceThan200();
+        for (let i = 0; i < listProduct.length; i++) {
+            document.write(listProduct[i].getInfo() + "<br>");
+        }
+    }
+    main();
+</script>
+</body>
+</html>

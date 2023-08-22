@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chữa bài</title>
+</head>
+<body>
+
+<script>
+    // let a = 10;
+    // let b = 20;
+    // a = b;
+    // b = 11;
+    // console.log(b); // 11
+    // console.log(a); // 20
+    //
+    //
+    //
+    // let student = {
+    //     name: "Linh",
+    //     isHandsome: true
+    // }
+    // let sv = student;
+    // sv.name = "Hồng";
+    // let sv3 = {
+    //     name:"Hồng",
+    //     isHandsome: true
+    // }
+    //
+    // console.log(sv) // { name: "Hồng", isHandSome: true }
+    // console.log(student) // { name: "Hồng", isHandSome: true }
+    // console.log(sv3) // { name:"Hồng", isHandsome: true}
+
+
+    class Kind {
+        nameKind;
+        featherColor;
+
+        constructor(nameKindInput, featherColorInput) {
+            this.featherColor = featherColorInput;
+            this.nameKind = nameKindInput;
+        }
+        
+        getNameKind() {
+            return this.nameKind;
+        }
+        
+    }
+    
+    class Dog {
+        nameDog; // string
+        age; // number
+        kindDog; // Kind (object)
+        isSick;
+        constructor(nameDogInput, ageInput, kindDogInput, isSickInput) {
+            this.nameDog = nameDogInput;
+            this.age = ageInput;
+            this.isSick = isSickInput;
+            this.kindDog = kindDogInput;
+        }
+
+        getKindDog() {
+            return this.kindDog;
+        }
+
+        setKindDog(kindDogInput) {
+            this.kindDog = kindDogInput;
+        }
+
+        getInfo() {
+            let data = ` ${this.nameDog} có tuổi là ${this.age} thuộc giống ${this.kindDog.getNameKind()}`
+            return data;
+        }
+
+        checkSick() {
+            if(this.isSick) {
+                return `${this.nameDog} ốm!!`
+            } else {
+                return `${this.nameDog} khỏe!!`
+            }
+        }
+    }
+
+    function main() {
+        let loaiI = new Kind("husky", "vàng");
+        let loaiII = new Kind("phốc", "đen");
+
+        let cho1 = new Dog("Quỳnh", 35, loaiI, false);
+        let cho2 = new Dog("Long con", 18, loaiII, true);
+
+        // document.write(cho1.getInfo())
+        // document.write("<br>")
+        // document.write(cho2.getInfo())
+
+        document.write(cho1.checkSick())
+        document.write("<br>")
+        document.write(cho2.checkSick())
+    }
+    main();
+</script>
+</body>
+</html>
