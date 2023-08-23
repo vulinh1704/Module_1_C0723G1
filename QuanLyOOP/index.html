@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Store</title>
+    <style>
+        center {
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>My Store</h1>
+    <button onclick="showFormAdd()">Add Product</button>
+
+     <!--form add-->
+    <div id="form-add"></div>
+
+     <!-- form edit-->
+    <div id="form-edit"></div>
+    <br>
+    <br>
+
+
+   <!-- Danh sach san pham-->
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tbody id="list-product">
+
+        </tbody>
+    </table>
+</center>
+
+<script src="Entity/Product.js"></script>
+<script src="Management/Store.js"></script>
+<script src="View/index.js"></script>
+</body>
+</html>

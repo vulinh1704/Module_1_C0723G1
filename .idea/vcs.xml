@@ -8,5 +8,6 @@
     <mapping directory="$PROJECT_DIR$/ChuyenDoiNhhietDo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/GitAndHTML" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/git" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test/banRauProject" vcs="Git" />
   </component>
 </project>
